@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<robot name="kuka_iiwa">
+  <link name="base_link"/>
+  <!-- Este es un modelo mínimo de ejemplo para pruebas visuales -->
+  <joint name="joint_a1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="1"/>
+  </joint>
+  <link name="link_1">
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.3"/>
+      </geometry>
+      <origin xyz="0 0 0.15"/>
+    </visual>
+  </link>
+</robot>
